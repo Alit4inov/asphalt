@@ -1,0 +1,87 @@
+.gallery {
+	padding-top: 25px;
+	h2 {
+		margin-bottom: 25px;
+	}
+}
+
+
+.gallery-grid {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.gallery-item {
+		display: block;
+		box-sizing: border-box;
+		width: 32%;
+		height: 320px;
+		box-shadow: 3px 3px 5px $gray;
+		margin-bottom: 2%;
+	}
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.w100 {
+		width: 100%;
+	}
+	.w60 {
+		width: 60%;
+	}
+	.w50 {
+		width: 50%;
+	}
+	.w38 {
+		width: 38%;
+	}
+	.w30 {
+		width: 30%;
+	}
+	.w20 {
+		width: 20%;
+	}
+
+}
+
+.description-block {
+	position: relative;
+	width: 100%;
+	padding: 20px 15px;
+	background-color: $yellow;
+	margin: 10px 0 60px 0; 
+	color: $gray;
+	border-top: 3px solid $black;
+	box-shadow: 3px 3px 10px $yellow; 
+	&.w50 {
+		height: 630px;
+		margin: 5px 0 5px 20px;
+	}
+	strong {
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+	.triangle-arrow-up {
+		position: absolute;
+		@include triangle(36px, $yellow, up);
+		left: 50%;
+		top: -18px;
+	}
+	.triangle-arrow-left {
+		position: absolute;
+		@include triangle(36px, $yellow, left);
+		top: 47%;
+		left: -18px;
+	}
+	.triangle-arrow {
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		left: 50%;
+		top: -20px;
+		background-color: $yellow;
+		border-right: 3px solid $gray;
+		border-top: 3px solid $gray;
+		transform: rotate(-45deg);
+	}
+}

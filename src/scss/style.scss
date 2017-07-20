@@ -1,0 +1,28 @@
+/* Vendors*/
+@import './bower/include-media/dist/include-media';
+
+@import 'vendors/fonts';
+
+
+/* Base modules*/
+@import 'base/main';
+
+
+// Layouts
+
+@import 'layout/common';
+@import 'layout/header';
+@import 'layout/footer';
+
+
+/* Components */
+
+
+
+
+// Pages
+
+@import 'pages/home';
+@import 'pages/gallery-page';
+@import 'pages/contact-page';
+@import 'pages/tarifs-page';

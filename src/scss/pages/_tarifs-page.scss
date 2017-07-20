@@ -1,0 +1,35 @@
+.tarifs-page {
+	.page-description {
+		h2 {
+		line-height: 1;
+		}	
+	}
+}
+
+.tarifs-holder {
+	margin-bottom: 40px;
+	table {
+		width: 100%;
+	}
+	table, tr, th, td {
+		border: 2px solid $gray;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		padding: 5px;
+		text-align: center;
+		font-weight: 600;
+		font-family: map-deep-get($base, 'base-font-sans-serif');
+	}
+	tr {
+		&:nth-child(2n) {
+			background-color: $light-gray;
+		}
+		th,td {
+			&:nth-child(2) {
+				text-align: left;
+			}
+		}
+	}
+}

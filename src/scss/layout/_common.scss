@@ -1,0 +1,74 @@
+#wrapper {
+    overflow: hidden;
+    min-height: calc(100vh - 226px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @extend %clearfix;
+    @include media('<widescreen') {
+        max-width: 1140px;
+    }
+    @include media('<desktop') {
+        max-width: 990px;
+    }
+    @include media('<tablet') {
+        max-width: 680px;
+    }
+}
+
+.hidden {
+    font-size: 0;
+    line-height: 0;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity: 0;         
+}
+
+.banner {
+    
+}
+
+.marked-brand {
+
+}
+
+.half-width {
+    width: 50%;
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.home-page, .gallery-page, .tarifs-page, .contact-page  {
+    .page-description {
+    h2 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 900;
+    line-height: 0.8;
+        &>.small {
+            display: inline-block;
+            width: 100%;
+            font-family: map-deep-get($base, 'base-font-sans-serif');
+            color: $middle-gray;
+            font-weight: 700;
+            }
+        }
+    }
+}
