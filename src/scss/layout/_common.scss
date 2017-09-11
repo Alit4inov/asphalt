@@ -55,20 +55,19 @@
     font-size: 14px;
 }
 
-.home-page, .gallery-page, .tarifs-page, .contact-page  {
-    .page-description {
-    h2 {
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    font-weight: 900;
-    line-height: 0.8;
+
+.page-description {
+    h2, h1 {
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        font-weight: 900;
+        line-height: 0.8;
         &>.small {
             display: inline-block;
             width: 100%;
             font-family: map-deep-get($base, 'base-font-sans-serif');
             color: $middle-gray;
             font-weight: 700;
-            }
         }
     }
 }
