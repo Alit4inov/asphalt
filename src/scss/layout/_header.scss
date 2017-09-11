@@ -9,17 +9,31 @@
         height: 68px;
         padding-right: 10px;
         margin-left: 20px;
+        @include media('<desktop') {
+            margin-left: 10px;
+        }@include media('<phone') {
+            padding-top: 15px;
+        }
         li {
             margin-bottom: 0;
             line-height: 1.4;
             a {
                 font-family: map-deep-get($base, 'base-font-sans-serif');
                 font-size: 14px;
+                @include media('<desktop') {
+                font-size: 12px;
+                }
             }
         }
     }
     .single-element {
         line-height: 68px;
+        @include media('<desktop') {
+            font-size: 12px;
+        }
+        @include media('<phone') {
+            display: none;
+        }
         a {
             color: $white;
             padding-left: 5px;
@@ -33,6 +47,9 @@
     float: left;
     margin-left: -50px;
     position: relative;
+    @include media ('<1600px') {
+        margin-left: 0;
+    }
     img {
         width: 100px;
         height: 68px;
@@ -56,13 +73,10 @@
     margin-left: 90px;
     @extend %listreset;
     @include media('<widescreen') {
-        
+        margin-left: 70px;
     }
     @include media('<desktop') {
-
-    }
-    @include media('<tablet') {
-    
+        margin-left: 35px;
     }
     li {
         display: inline-block;
@@ -72,7 +86,7 @@
             padding-left: 35px;
         }
         @include media('<desktop') {
-            padding-left: 15px;
+            padding-left: 10px;
         }
         @include media('<tablet') {
             display: block;

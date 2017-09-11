@@ -8,15 +8,6 @@
     margin: 0 auto;
     padding: 0 15px;
     @extend %clearfix;
-    @include media('<widescreen') {
-        max-width: 1140px;
-    }
-    @include media('<desktop') {
-        max-width: 990px;
-    }
-    @include media('<tablet') {
-        max-width: 680px;
-    }
 }
 
 .hidden {

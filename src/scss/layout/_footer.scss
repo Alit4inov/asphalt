@@ -1,7 +1,9 @@
 #footer {
-	height: 226px;
 	background-color: $gray;
 	color: $middle-gray;
+	@include media('<tablet') {
+	   font-size: 12px;
+	}
 }
 
 .footer-inner {
@@ -26,8 +28,24 @@
 	}
 }
 
+.about-us-info {
+	width: 35%;
+	@include media('<desktop') {
+	    width: 100%;
+	}
+}
+
 .service-info {
+	width: 30%;
 	padding-left: 45px;
+	@include media('<desktop') {
+	    width: 50%;
+	    padding-left: 15px;
+	}
+	@include media('<tablet') {
+	    width: 100%;
+	    margin-bottom: 15px;
+	}
 }
 
 .service-nav {
@@ -50,6 +68,13 @@
 
 .contact-info {
 	@extend %clearfix;
+	width: 35%;
+	@include media('<desktop') {
+	    width: 50%;
+	}
+	@include media('<tablet') {
+	    width: 100%;
+	}
 }
 
 .contact-list {
@@ -88,14 +113,9 @@
 	.soc-icon {
 		font-size: 24px;
 		line-height: 1.5;
+		@include media('<tablet') {
+	    font-size: 20px;
+		}
 	}
-}
-
-.w30 {
-	width: 30%;
-}
-
-.w35 {
-	width: 35%
 }
 

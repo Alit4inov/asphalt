@@ -1,5 +1,6 @@
 
 .slider-banner {
+	position: relative;
 	margin-bottom: 40px;
 	.container {
 		padding: 0;
@@ -17,8 +18,14 @@
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	@include media('<tablet') {
+	@include media('<desktop') {
     	height: 450px;
+    }
+    @include media('<tablet') {
+    	height: 350px;
+    }
+    @include media('<phone') {
+    	height: 250px;
     }
 }
 
@@ -104,8 +111,18 @@
 .thumbs-holder {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	.thumb {
 		width: 23%;
+		@include media('<desktop') {
+        width: 48%;
+        margin-bottom: 15px;
+    	}
+    	@include media('<600px') {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    	}
 	}
 	.img-holder {
 		width: 100%;
@@ -150,17 +167,23 @@
 	margin-bottom: 50px;
 	.w48 {
 		width: 48%;
+		@include media('<tablet') {
+		    width: 100%;
+		    margin-bottom: 15px;
+		}
 	}
 	.w32 {
 		width: 32%;
-	}
-	.w23 {
-		width: 23%;
+		@include media('<tablet') {
+		    width: 100%;
+		    margin-bottom: 15px;
+		}
 	}
 	.txt-thumbs-row {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 25px;
+		flex-wrap: wrap;
 	}
 	.txt-thumb {
 		padding-top: 15px;
